@@ -252,7 +252,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Graph-Curvature-and-the-Robustness-of-Cancer-Networks">Graph Curvature and the Robustness of Cancer Networks<a class="anchor-link" href="#Graph-Curvature-and-the-Robustness-of-Cancer-Networks">&#182;</a></h1>
+<h1 id="Graph-Curvature-and-the-Robustness-of-Cancer-Networks">Graph Curvature and the Robustness of Cancer Networks<a class="anchor-link" href="#Graph-Curvature-and-the-Robustness-of-Cancer-Networks">&#182;</a></h1><h3 id="Allen-Tannenbaum,-Chris-Sander,-Romeil-Sandhu,-Liangjia-Zhu,-Ivan-Kolesov,-Eduard-Reznik,-Yasin-Senbabaoglu,-Tryphon-Georgiou">Allen Tannenbaum, Chris Sander, Romeil Sandhu, Liangjia Zhu, Ivan Kolesov, Eduard Reznik, Yasin Senbabaoglu, Tryphon Georgiou<a class="anchor-link" href="#Allen-Tannenbaum,-Chris-Sander,-Romeil-Sandhu,-Liangjia-Zhu,-Ivan-Kolesov,-Eduard-Reznik,-Yasin-Senbabaoglu,-Tryphon-Georgiou">&#182;</a></h3>
 </div>
 </div>
 </div></section></section><section><section>
@@ -308,9 +308,8 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Robustness-of-a-Network:-Birkhoff's-Ergodic-Theorem">Robustness of a Network: Birkhoff's Ergodic Theorem<a class="anchor-link" href="#Robustness-of-a-Network:-Birkhoff's-Ergodic-Theorem">&#182;</a></h2><ul>
 <li><p>Define $\mathcal{Y} = \mathcal{X}\times \mathcal{X}\times \cdots$ as the corresponding path space. Denote $\tau: \mathcal{Y}\rightarrow \mathcal{Y}$ as the shift operator:
-\begin{equation}
-\tau((x_0,x_1,x_2,\cdots)) = (x_1, x_2, \cdots)
-\end{equation}</p>
+$$\tau((x_0,x_1,x_2,\cdots)) = (x_1, x_2, \cdots)
+$$</p>
 </li>
 <li><p>For any real-valued function $\phi:\mathcal{Y}\rightarrow \mathcal{R}$, the ergodic theorem guarantees, for any $x\in \mathcal{Y}$ (almost surely),
 $$\lim_{n\rightarrow\infty} \frac{1}{n}\sum_{i=1}^n\phi(\tau^i x) = \int_{\mathcal{Y}} \phi(x)\pi(x)\mathrm{d}x := \Phi$$
@@ -359,7 +358,7 @@ $$\phi(x) := \log p_{x_0x_1}$$</li>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Fluctuation-Theorem:-Entropy">Fluctuation Theorem: Entropy<a class="anchor-link" href="#Fluctuation-Theorem:-Entropy">&#182;</a></h3><ul>
 <li>The entropy of a network can be defined as
-$$H = -\pi_i \sum_j p_{ij}\log p_{ij}$$ 
+$$H = -\sum_i \pi_i \sum_j p_{ij}\log p_{ij}$$ 
 $\pi_i$ is the stationary distribution of the Markov chain.</li>
 <li>This definition can also be derived as a special case of entropy for more general dynamical systems.</li>
 </ul>
@@ -373,20 +372,12 @@ $\pi_i$ is the stationary distribution of the Markov chain.</li>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Fluctuation-Theorem">Fluctuation Theorem<a class="anchor-link" href="#Fluctuation-Theorem">&#182;</a></h3><p>Consider a perturbation in the Network of the form
-\begin{equation}
-\phi(\delta) = \phi + \delta\phi
-\end{equation}
+$$\phi(\delta) = \phi + \delta\phi$$
 Denote
-\begin{equation}
-\Delta R = R(\delta) - R(0)
-\end{equation}
-\begin{equation}
-\Delta H = H(\delta) - H(0)
-\end{equation}
+$$\Delta R = R(\delta) - R(0)$$
+$$\Delta H = H(\delta) - H(0)$$
 The fluctuation theorem states, for sufficiently small $\delta$, we have
-\begin{equation}
-\Delta H \times \Delta R &gt; 0
-\end{equation}</p>
+$$\Delta H \times \Delta R > 0$$</p>
 
 </div>
 </div>
@@ -413,9 +404,7 @@ The fluctuation theorem states, for sufficiently small $\delta$, we have
 <li><p>if $X = \mathcal{R}^N$ we have $H(t) = H(\rho_t)$ is a concave function.</p>
 </li>
 <li><p>if $X = \mathcal{M}$ is a manifold, we have
-\begin{equation}
-H(\rho_t) &gt; tH (\rho_0) + (1-t)H(\rho_1) + \frac{t(1-t)\kappa}{2} W_2(\rho_0, rho_1)^2
-\end{equation}</p>
+$$H(\rho_t) > tH (\rho_0) + (1-t)H(\rho_1) + \frac{t(1-t)\kappa}{2} W_2(\rho_0, \rho_1)^2$$</p>
 </li>
 <li>$\kappa$ is a lower bound to the Ricci curvature on the manifold $\mathcal{M}$.</li>
 </ul>
@@ -431,9 +420,7 @@ H(\rho_t) &gt; tH (\rho_0) + (1-t)H(\rho_1) + \frac{t(1-t)\kappa}{2} W_2(\rho_0,
 <h3 id="Positive-Correlation-of-Curvature-and-Entropy-(and-Robustness)">Positive Correlation of Curvature and Entropy (and Robustness)<a class="anchor-link" href="#Positive-Correlation-of-Curvature-and-Entropy-(and-Robustness)">&#182;</a></h3><ul>
 <li>On a network, we can use the inequality to define the Ricci curvature (lower bound) for the whole network.</li>
 <li>This indicate the positive correlation of entropy and curvature that we will express as
-\begin{equation}
-\Delta S\times\Delta Ric &gt; 0
-\end{equation}</li>
+$$\Delta S\times\Delta Ric > 0$$</li>
 </ul>
 
 </div>
@@ -446,9 +433,7 @@ H(\rho_t) &gt; tH (\rho_0) + (1-t)H(\rho_1) + \frac{t(1-t)\kappa}{2} W_2(\rho_0,
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Combining with $\Delta H \times \Delta R > 0$
-\begin{equation}
-\Delta R \times \Delta Ric &gt; 0
-\end{equation}</li>
+$$\Delta R \times \Delta Ric > 0$$</li>
 <li>Since the curvature is very easy to compute for a network, this may be used as an alternative way to expressing function robustness of a network.</li>
 </ul>
 
@@ -461,19 +446,17 @@ H(\rho_t) &gt; tH (\rho_0) + (1-t)H(\rho_1) + \frac{t(1-t)\kappa}{2} W_2(\rho_0,
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Ollivier-Ricci-Curvature">Ollivier-Ricci Curvature<a class="anchor-link" href="#Ollivier-Ricci-Curvature">&#182;</a></h3><ul>
-<li>the idea is that two small geodecis balls around two very close points will get closer on average if the curvature is positive.
-<img src="or.png">
-\begin{equation}
-W_1(\mu_x, \mu_y) = (1 - \kappa(x,y)) d(x,y)
-\end{equation}</li>
+<li>the idea is that two small geodecis balls around two very close points will get closer on average if the curvature is positive.</li>
+</ul>
+<p><div style="max-width:100%">
+![Image](or.png)
+</div>
+$$W_1(\mu_x, \mu_y) = (1 - \kappa(x,y)) d(x,y)$$</p>
+<ul>
 <li>On a network (weighted graph), we can define $\mu_x$ as a one step random walk from $x$ using weights on edges.
-\begin{equation}
-\mu<em>x(y) := \frac{\omega</em>{xy}}{\sum<em>{y}\omega</em>{xy}}
-\end{equation}</li>
+$$\mu_x(y) := \frac{\omega_{xy}}{\sum_{y}\omega_{xy}}$$</li>
 <li>Thus to compute curvature on a network, we only need to compute $W_1(\mu_x, \mu_y)$ and $d(x,y)$.
-\begin{equation}
-\kappa(x,y) = 1 - \frac{W_1(\mu_x, \mu_y)}{d(x,y)}
-\end{equation}</li>
+$$\kappa(x,y) = 1 - \frac{W_1(\mu_x, \mu_y)}{d(x,y)}$$</li>
 </ul>
 
 </div>
@@ -486,13 +469,9 @@ W_1(\mu_x, \mu_y) = (1 - \kappa(x,y)) d(x,y)
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Scalar-Curvature-and-Weighted-Curvature">Scalar Curvature and Weighted Curvature<a class="anchor-link" href="#Scalar-Curvature-and-Weighted-Curvature">&#182;</a></h3><ul>
 <li>Scalar Curvature:
-\begin{equation}
-S(x) := \sum_y \kappa(x, y)
-\end{equation}</li>
+$$S(x) := \sum_y \kappa(x, y)$$</li>
 <li>Weighted Curvature:
-\begin{equation}
-S(x) := \sum_y \kappa(x, y)\mu_x(y)
-\end{equation}</li>
+$$S(x) := \sum_y \kappa(x, y)\mu_x(y)$$</li>
 </ul>
 
 </div>
@@ -519,7 +498,7 @@ S(x) := \sum_y \kappa(x, y)\mu_x(y)
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Intuition-and-Objective">Intuition and Objective<a class="anchor-link" href="#Intuition-and-Objective">&#182;</a></h3><ul>
 <li><p>Compute curvatures as a measure of how robust cancer networks are: 
-<img src="rc.png">
+<img src="rc.png" alt="">
 the random network has average Ricci curvature of about −0.352085 with 63% of the edges being negative, while for E. Coli we have average curvature of −0.0222 with 50% of the edges being negative.</p>
 </li>
 <li><p>Compare robustness of cancer networks with normal networks via curvatures.</p>
@@ -538,7 +517,7 @@ the random network has average Ricci curvature of about −0.352085 with 63% of 
 <h3 id="Metabolic-Networks">Metabolic Networks<a class="anchor-link" href="#Metabolic-Networks">&#182;</a></h3><ul>
 <li>800 "arbitrary" genes, certain key genes associated with cancer (e.g., BRCA1, TP53) are not present.</li>
 <li>Three curvatures are computed and averaged over each network. In all following results, computation is taken over just direct paths. (a complete computation (over all possible paths) still yields comparable results).
-<img src="cn1.png"></li>
+<img src="cn1.png" alt=""></li>
 </ul>
 
 </div>
@@ -549,8 +528,8 @@ the random network has average Ricci curvature of about −0.352085 with 63% of 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="cn2.png">
-<img src="cn3.png"></p>
+<p><img src="cn2.png" alt="">
+<img src="cn3.png" alt=""></p>
 
 </div>
 </div>
@@ -560,7 +539,7 @@ the random network has average Ricci curvature of about −0.352085 with 63% of 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Metabolic-Networks:-important-gene-pairs">Metabolic Networks: important gene pairs<a class="anchor-link" href="#Metabolic-Networks:-important-gene-pairs">&#182;</a></h3><p><img src="cn7.png"></p>
+<h3 id="Metabolic-Networks:-important-gene-pairs">Metabolic Networks: important gene pairs<a class="anchor-link" href="#Metabolic-Networks:-important-gene-pairs">&#182;</a></h3><p><img src="cn7.png" alt=""></p>
 
 </div>
 </div>
@@ -587,7 +566,7 @@ reoccurrence of genes ACO1 and ACO2 can also be seen in Table IV.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Transcriptional-Networks">Transcriptional Networks<a class="anchor-link" href="#Transcriptional-Networks">&#182;</a></h3><ul>
 <li>450 cancer-related genes, focus on the inter-relationship of cancer related genes.
-<img src="cn5.png"></li>
+<img src="cn5.png" alt=""></li>
 </ul>
 
 </div>
@@ -598,7 +577,7 @@ reoccurrence of genes ACO1 and ACO2 can also be seen in Table IV.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Transcriptional-Networks">Transcriptional Networks<a class="anchor-link" href="#Transcriptional-Networks">&#182;</a></h3><p><img src="cn6.png"></p>
+<h3 id="Transcriptional-Networks">Transcriptional Networks<a class="anchor-link" href="#Transcriptional-Networks">&#182;</a></h3><p><img src="cn6.png" alt=""></p>
 
 </div>
 </div>
