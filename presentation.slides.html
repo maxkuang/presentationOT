@@ -446,13 +446,9 @@ $$\Delta R \times \Delta Ric > 0$$</li>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Ollivier-Ricci-Curvature">Ollivier-Ricci Curvature<a class="anchor-link" href="#Ollivier-Ricci-Curvature">&#182;</a></h3><ul>
-<li>the idea is that two small geodecis balls around two very close points will get closer on average if the curvature is positive.</li>
-</ul>
-<p><div style="max-width:100%">
-![Image](or.png)
-</div>
-$$W_1(\mu_x, \mu_y) = (1 - \kappa(x,y)) d(x,y)$$</p>
-<ul>
+<li>the idea is that two small geodecis balls around two very close points will get closer on average if the curvature is positive.
+<img src="or.png" alt="">
+$$W_1(\mu_x, \mu_y) = (1 - \kappa(x,y)) d(x,y)$$</li>
 <li>On a network (weighted graph), we can define $\mu_x$ as a one step random walk from $x$ using weights on edges.
 $$\mu_x(y) := \frac{\omega_{xy}}{\sum_{y}\omega_{xy}}$$</li>
 <li>Thus to compute curvature on a network, we only need to compute $W_1(\mu_x, \mu_y)$ and $d(x,y)$.
